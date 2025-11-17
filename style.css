@@ -1,0 +1,341 @@
+/* ========== 【其他設定】 ========== */
+html, body {
+    touch-action: manipulation;
+  }
+
+input,
+select,
+textarea {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+/* ========== 【整體樣式】 ========== */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+#debug-log {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 90vw;
+    max-width: 500px;
+    height: 30vh;
+    background: rgba(0, 0, 0, 0.8);
+    color: lime;
+    font-family: monospace;
+    font-size: 2vh;
+    padding: 10px;
+    overflow-y: auto;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    z-index: 999;
+}
+
+#gameid-Panel {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90vw;
+    max-width: 300px;
+    text-align: left;
+    z-index: 10;
+}
+
+#gameid-bg {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    background-image: url('hana_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -10;
+}
+
+#gameid-Panel-input {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+#gameid-Panel-startbtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #eb2f9600;
+    color:  #eb2f96;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#game-Panel {
+    width: 100vw;
+    max-width: 450px;
+    aspect-ratio: 9 / 16;
+    position: relative;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* ========== 【角色圖片】 ========== */
+#character {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+}
+
+/* ========== 【對話框】 ========== */
+#dialogue-box {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    color: white;
+    font-size: 2.2vh;
+    text-align: center;
+    pointer-events: none;
+}
+
+#dialogue-name {
+    position: absolute;
+    width: auto;
+    max-width: 50%;
+    height: auto;
+    top: 5%;
+    left: 5%;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 3.4vh;
+}
+
+#dialogue-text {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    right: 5%;
+    font-size: 3vh;
+    line-height: 1.5;
+    text-align: left;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    pointer-events: none;
+}
+
+/* 下一頁按鈕 */
+#next-button {
+    position: absolute;
+    top: 70%;
+    right: 5%;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.4);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 2.4vh;
+    cursor: pointer;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+
+/* ========== 【問答 UI】 ========== */
+#qa-Panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90vw;
+    max-width: 300px;
+    z-index: 10;
+    text-align: center;
+}
+
+#qa-title {
+    font-size: 2.2vh;
+    font-weight: bold;
+    color: #000000;
+}
+
+#qa-Panel-input {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+#choice-button,
+.choice-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #eb2f96;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+.choice-button:hover {
+    background-color: #c0277a;
+    transform: scale(1.05);
+}
+
+.choice-button:active {
+    background-color: #a01e61;
+    transform: scale(0.95);
+}
+
+/* 送出按鈕 */
+#submit-btn {
+    background: #aaa;
+    color: white;
+    padding: 1.5vh;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#submit-btn:hover {
+    background: #888;
+}
+
+/* ========== 【結束面板】 ========== */
+#end-Panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90vw;
+    max-width: 300px;
+    z-index: 10;
+    text-align: center;
+    font-size: 2vh;
+}
+
+#end-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #eb2f96;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* ========== 【背景音樂按鈕】 ========== */
+#toggle-music-btn {
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    width: 70px;         
+    height: 70px;  
+    z-index: 9999; 
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #ffffff79;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9997;
+}
+
+/* ========== 【對話紀錄面板】 ========== */
+#dialogue-log {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;    
+    height: 90%;
+    overflow-y: auto; 
+    z-index: 9998;
+    text-align: left;
+    font-size: 2vh;
+    box-sizing: border-box;
+}
+
+#log-title{
+    text-align: center;    
+    font-size: 1.5em;       
+    margin-bottom: 10px;  
+    font-weight: bold;     
+}
+
+
+
+#toggle-log-btn {
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    width: 70px;         
+    height: 70px;  
+    z-index: 9999; 
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #ffffff79;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#log-content div {
+    margin-bottom: 8px;
+    line-height: 1.4;
+    color: rgb(0, 0, 0);
+}

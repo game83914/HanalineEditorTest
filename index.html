@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Hanaline網頁版</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="gameid-Panel">
+        <div id="gameid-bg"></div>
+        <h2 data-i18n="enterGameId" style="display: none;">請輸入遊戲 ID</h2>
+        <input type="text" id="gameid-Panel-input" data-i18n-placeholder="gameIdPlaceholder" placeholder="輸入遊戲 ID" style="display: none;">
+        <button id="gameid-Panel-startbtn" data-i18n="startGame">點擊任意位置開始遊戲</button>
+    </div>
+
+
+    <div id="game-Panel">
+        <img id="character" src="" alt="角色">
+        <audio id="bg-music" loop></audio>
+        <audio id="character-audio"></audio>
+        <div id="dialogue-box">
+            <p id="dialogue-name">name</p>
+            <p id="dialogue-text" data-i18n="loading">載入中...</p>
+            <button id="next-button" data-i18n="nextPage">下一頁</button>            
+        </div>
+        <div id="qa-Panel">
+            <p id="qa-title" data-i18n="questionTitle">題目</p>
+        </div>
+        <div id="end-Panel">
+            <p id="end-title" data-i18n="gameOver">此遊戲已結束</p>
+            <button id="end-button" data-i18n="back">返回</button>  
+        </div>
+
+        <button id="toggle-music-btn">🔊</button>
+        <button id="toggle-log-btn">💬</button>
+
+        <div id="dialogue-log" style="display: none;">
+            <div id="log-title" data-i18n="log">對話紀錄</div>
+            <div id="log-content"></div>
+        </div>
+
+    </div>
+    <script src="lang.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
