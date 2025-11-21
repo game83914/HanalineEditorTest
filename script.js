@@ -174,11 +174,8 @@ async function loadGameData() {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
-        // 跟你 header 裡的一樣（不要漏掉 Basic 兩個字）
-        'Authorization': 'Basic aGFuYWxpbmU6aWNjdA==',
       },
       
-      credentials: 'include',
     });
 
     console.log("response status:", response.status);
@@ -673,4 +670,5 @@ function addlog(speakerName,text)
 function getQueryParam(key) {
     return new URLSearchParams(window.location.search).get(key);
   }
+
 
